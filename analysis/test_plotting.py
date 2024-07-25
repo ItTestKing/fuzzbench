@@ -13,10 +13,12 @@
 # limitations under the License.
 """Plotting tests."""
 
+import matplotlib as mpl
 import matplotlib.testing.compare as plt_cmp
 import pandas as pd
-
 from analysis import plotting
+
+mpl.use('Agg')
 
 
 def test_pariwise_unique_coverage_heatmap_plot(tmp_path):
